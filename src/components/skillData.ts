@@ -15,7 +15,7 @@ const skillData: Skill[] = [
     name: 'JavaScript',
     icon: 'mdi-language-javascript',
     color: 'orange',
-    description: 'フロントエンド開発で使用しています。',
+    description: 'フロントエンド開発で使用しています。現在、より型安全なシステムの開発のためにTypeScriptの学習を始めています。',
     progress: 0,
     targetProgress: 50,
   },
