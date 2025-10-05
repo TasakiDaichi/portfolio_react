@@ -14,7 +14,6 @@ import { TbBrandCSharp } from "react-icons/tb";
 import { FaJs, FaAws } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
-import { MdHeight } from 'react-icons/md';
 
 const iconMap: Record<string, React.ReactNode> = {
   'mdi-language-python': <IoLogoPython />,
