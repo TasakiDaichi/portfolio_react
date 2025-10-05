@@ -1,0 +1,104 @@
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-left: 32px;
+  padding-left: 0;
+}
+
+/* MUI Button styling to match Vue v-btn */
+.buttons .MuiButton-root {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(5px);
+  border: 1px solid;
+}
+
+/* Button colors to match Vue */
+.buttons .MuiButton-root:nth-child(1) {
+  border-color: #1976d2 !important;
+  color: #1976d2 !important;
+}
+
+.buttons .MuiButton-root:nth-child(2) {
+  border-color: #fbc02d !important;
+  color: #fbc02d !important;
+}
+
+.buttons .MuiButton-root:nth-child(3) {
+  border-color: #388e3c !important;
+  color: #388e3c !important;
+}
+
+.buttons .MuiButton-root:nth-child(4) {
+  border-color: #fd9002 !important;
+  color: #fd9002 !important;
+}
+
+.buttons .MuiButton-root:nth-child(5) {
+  border-color: #d32f2f !important;
+  color: #d32f2f !important;
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Left-align card content and remove default padding */
+.card .MuiCardContent-root {
+  text-align: left;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+.profile-contents {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  text-align: left;
+}
+
+.profile-content {
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.years {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.years p {
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+}
+
+.content {
+  margin-top: 8px;
+  text-align: left;
+}
+
+.content p {
+  margin: 0 0 8px 0;
+  text-align: left;
+}
+
+.section-heading {
+  font-weight: bold !important;
+  margin-bottom: 8px;
+}
+
+/* Match Vue's card title styling */
+.MuiTypography-h5 {
+  font-weight: bold;
+}
+
+.research-content,
+.history-content {
+  margin-bottom: 16px;
+}
