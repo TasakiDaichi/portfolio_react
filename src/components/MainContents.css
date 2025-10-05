@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* Hero section */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: #000000;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  gap: 160px;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 400px;
+}
+
+.motto {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 8rem;
+  font-weight: bold;
+  line-height: 0.85;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.08em;
+  -webkit-text-stroke: 0.5px #ffffff;
+  opacity: 0;
+}
+
+.identity-container {
+  margin-top: 1.5rem;
+}
+
+.identity {
+  font-family: "Yu Gothic", "游ゴシック体", "YuGothic", "Helvetica Neue", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+}
+
+.vertical-subtitle {
+  font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  writing-mode: vertical-rl;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: #e0e0e0;
+  font-weight: bold;
+}
+
+/* Section styles */
+.about, .skills, .projects, .contact {
+  padding: 12px 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 24px 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #E0E0E0;
+  margin: 0;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.github-link {
+  color: #42b883;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.github-link:hover {
+  background-color: rgba(66, 184, 131, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-from-top {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-motto .motto {
+  animation: slide-in-from-top 0.5s ease-out forwards;
+}
+
+.animate-motto .motto:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.animate-motto .motto:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.animate-motto .motto:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Responsive design */
+@media (max-width: 960px) {
+  .motto {
+    font-size: 5rem;
+  }
+  .identity {
+    font-size: 1rem;
+  }
+  .vertical-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 1rem;
+  }
+  
+  .hero-container {
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .motto {
+    font-size: 3.5rem;
+    -webkit-text-stroke: 0.2px #ffffff;
+  }
+
+  .identity {
+    font-size: 0.9rem;
+  }
+
+  .vertical-subtitle {
+    font-size: 0.8rem;
+    max-height: 300px;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
