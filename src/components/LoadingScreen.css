@@ -58,12 +58,13 @@
   text-align: center;
 }
 
-.loading-bar {
+/* Moved to shared ProgressBar component */
+/* .loading-bar {
   height: 10px;
   background-color: #42b883;
   transition: width 0.2s ease;
   border-radius: 5px;
-}
+} */
 
 .loading-text {
   margin-top: 10px;

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './LoadingScreen.css';
+import ProgressBar from './ProgressBar';
 
 type Props = {
   onFinish?: () => void;
@@ -35,7 +36,14 @@ const LoadingScreen: React.FC<Props> = ({ onFinish }) => {
       </div>
 
       <div className="progress-wrapper">
-        <div className="loading-bar" style={{ width: `${progress}%` }} />
+        <ProgressBar
+          progress={progress}
+          color="#42b883"
+          height={10}
+          borderRadius={5}
+          transition="width 0.2s ease"
+          backgroundColor="rgba(0,0,0,0.3)"
+        />
         <div className="loading-text">{progress}%</div>
       </div>
     </div>

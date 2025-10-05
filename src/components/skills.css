@@ -1,0 +1,83 @@
+/* Skills container - grid layout like Vue */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  padding: 0;
+}
+
+/* Skill card animation */
+.skill-card {
+  position: relative;
+  height: 212px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.skill-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skill header with icon and name */
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.skill-icon {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.skill-name {
+  font-weight: bold !important;
+  margin: 0 !important;
+}
+
+/* Skill description */
+.skill-description {
+  margin-bottom: 16px !important;
+  line-height: 1.5;
+}
+
+/* Skill progress bar section */
+.skill-bar {
+  position: absolute;
+  bottom: 20px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.progress-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Match Vue responsive behavior */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Progress bar transition to match Vue */
+.skill-card .MuiLinearProgress-bar {
+  transition: width 1.5s ease-out !important;
+}
