@@ -19,3 +19,11 @@ export interface Skill {
     targetProgress: number;
     progress?: number;
 }
+
+export interface Project {
+  id: number,
+  name: string,
+  description: string,
+  link: string,
+  movieLink: string
+}
