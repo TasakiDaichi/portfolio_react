@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
 import profileData from './profileData';
+import './profile.css';
 
 import { MdAccountBox, MdRocket } from 'react-icons/md';
 import { IoMdFlask, IoMdBriefcase, IoMdHeart } from "react-icons/io";
@@ -51,14 +52,53 @@ const Profile: React.FC = () => {
               <Typography color="text.secondary" gutterBottom>{activeData.subtitle}</Typography>
             )}
 
-            {activeData.sections.map((sec, i) => (
-              <div key={i} style={{ marginTop: 12 }}>
-                {sec.heading && <Typography variant="h6">{sec.heading}</Typography>}
-                {sec.paragraphs.map((p, j) => (
-                  <Typography key={j}>{p}</Typography>
-                ))}
-              </div>
-            ))}
+            <div className="profile-contents">
+              {activeData.sections.map((sec, i) => {
+                if (sec.heading) {
+                  // Section with heading (research/history content)
+                  return (
+                    <div key={i} className="profile-content">
+                      <Typography variant="h6" className="section-heading">{sec.heading}</Typography>
+                      <div className="content">
+                        {sec.paragraphs.map((p, j) => (
+                          <Typography key={j} paragraph>{p}</Typography>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                } else {
+                  // Main profile content - extract years from paragraphs
+                  return sec.paragraphs.map((p, j) => {
+                    const lines = p.split('\n');
+                    if (lines.length >= 2) {
+                      const yearLine = lines[0]; // e.g. "2021年3月 - 愛知県立時習館高等学校 卒業"
+                      const contentLine = lines.slice(1).join('\n');
+                      const [date, ...schoolParts] = yearLine.split(' - ');
+                      const school = schoolParts.join(' - ');
+                      return (
+                        <div key={`${i}-${j}`} className="profile-content">
+                          <div className="years">
+                            <Typography component="p" sx={{ fontWeight: 'bold', margin: 0 }}>{date}</Typography>
+                            <Typography component="p" sx={{ fontWeight: 'bold', margin: 0 }}>{school}</Typography>
+                          </div>
+                          <div className="content">
+                            <Typography paragraph>{contentLine}</Typography>
+                          </div>
+                        </div>
+                      );
+                    } else {
+                      return (
+                        <div key={`${i}-${j}`} className="profile-content">
+                          <div className="content">
+                            <Typography paragraph>{p}</Typography>
+                          </div>
+                        </div>
+                      );
+                    }
+                  });
+                }
+              })}
+            </div>
           </CardContent>
         </Card>
       </div>
