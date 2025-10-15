@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Profile from './profile';
 import Skills from './skills';
 import Project from './project';
+import NewsComponent from './news';
 import './MainContents.css';
 
 import IconButton from '@mui/material/IconButton';
 import { FaGithub } from "react-icons/fa";
-import NewsComponent from './News';
 
 const MainContents: React.FC = () => {
   const [isMounted, setIsMounted] = useState(false);
