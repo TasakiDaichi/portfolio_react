@@ -74,13 +74,25 @@ const profileData: CardData[] = [
   {
     id: "internship",
     title: "インターンシップ",
-    subtitle: "長期インターン以外にも、夏季インターンに挑戦し複数社で賞をいただいております。",
+    subtitle: "長期インターン以外にも、夏季インターンに挑戦し複数社で賞をいただいております。こちらは順次更新予定です。",
     sections: [
         {
-            heading: "freee株式会社",
-            paragraphs: [
-                ""
-            ]
+          heading: "freee株式会社",
+          paragraphs: [
+              "エンジニア2週間の実務型インターンに参加しました。"
+          ]
+        },
+        {
+          heading: "ラクスル株式会社",
+          paragraphs: [
+              "HackWeek2025に参加し、所属チームでインターンAwardを受賞しました。"
+          ]
+        },
+        {
+          heading: "Speee株式会社",
+          paragraphs: [
+              "3日間の事業開発型エンジニアインターンに参加し、所属チームで優秀賞を頂きました。"
+          ]
         }
     ]
   },

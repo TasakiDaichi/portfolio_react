@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Profile from './profile';
 import Skills from './skills';
 import Project from './project';
+import NewsComponent from './news';
 import './MainContents.css';
 
 import IconButton from '@mui/material/IconButton';
@@ -36,6 +37,14 @@ const MainContents: React.FC = () => {
               ユーザーを起点に、<br />誰にでも使いやすいプロダクトを。
             </p>
           </div>
+        </div>
+      </section>
+
+      {/*ニュースセクション*/}
+      <section>
+        <div className='container'>
+          <h2>NEWS</h2>
+          <NewsComponent />
         </div>
       </section>
 

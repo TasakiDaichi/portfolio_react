@@ -1,0 +1,39 @@
+.news-container {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.news-card {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.dates{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.categories{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 4px;
+}
+
+.card-actions {
+    justify-content: flex-end;
+    padding: 8px 16px;
+}
+
+.no-detail {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 0.875rem;
+}
