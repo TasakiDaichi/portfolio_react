@@ -21,9 +21,17 @@ export interface Skill {
 }
 
 export interface Project {
-  id: number,
-  name: string,
-  description: string,
-  link: string,
-  movieLink: string
+  id: number;
+  name: string;
+  description: string;
+  link: string;
+  movieLink: string;
+}
+
+export interface News {
+  id: number;
+  date: string;
+  category: string[];
+  description: string;
+  link?: string;
 }

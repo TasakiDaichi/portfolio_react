@@ -6,6 +6,7 @@ import './MainContents.css';
 
 import IconButton from '@mui/material/IconButton';
 import { FaGithub } from "react-icons/fa";
+import NewsComponent from './News';
 
 const MainContents: React.FC = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -36,6 +37,14 @@ const MainContents: React.FC = () => {
               ユーザーを起点に、<br />誰にでも使いやすいプロダクトを。
             </p>
           </div>
+        </div>
+      </section>
+
+      {/*ニュースセクション*/}
+      <section>
+        <div className='container'>
+          <h2>NEWS</h2>
+          <NewsComponent />
         </div>
       </section>
 
